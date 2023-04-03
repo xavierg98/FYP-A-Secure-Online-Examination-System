@@ -1,0 +1,26 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+    
+                
+                <h2 class="mt-5">Environment Check</h2>
+                <h3 style="font-family:courier;">Instructions:</h3>
+                <ol style="font-family:courier;">               
+                <li>Start/Stop Recording: Click to alternate between start and stop recording</li>
+                <li>Please do a recording of your surrounding</li>
+                </ol>	
+
+                <img src="{{ url_for('video_feed') }}" height="80%">
+    
+                <form method="post" action="{{ url_for('taskrec') }}">                   
+                    <input type="submit" value="Start/Stop Recording" name="rec" />
+                    
+                    </form>
+
+                    <a href="/facial_reg"><button>Proceed</button></a>    
+                    	                                
+            </div>
+        </div>
+    </div>
+    </body>

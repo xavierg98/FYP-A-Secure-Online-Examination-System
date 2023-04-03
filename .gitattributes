@@ -1,0 +1,2 @@
+pyserver filter=lfs diff=lfs merge=lfs -text
+pytest filter=lfs diff=lfs merge=lfs -text

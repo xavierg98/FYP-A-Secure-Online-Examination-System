@@ -1,0 +1,33 @@
+<div *ngIf="user">
+    <h2>{{exam.examName | uppercase}} Details</h2>
+    <div><span>Id: </span>{{exam.examID}}</div>
+    <div>
+        <p>
+            Exam ID: <input [(ngModel)]="exam.examID" placeholder="Exam ID">
+        </p>
+        <p>
+            Exam Name: <input [(ngModel)]="exam.examName" placeholder="Exam Name">
+        </p>
+        <p>
+            Exam Type: <input [(ngModel)]="exam.examType" placeholder="Exam Type">
+        </p>
+        <p>
+            Start Data: <input [(ngModel)]="exam.startDate" placeholder="Exam Date">
+        </p>
+        <p>
+            Exam Status: <input [(ngModel)]="exam.examStatus" placeholder="Exam Status">
+        </p>
+        <p>
+            Exam Creator: <input [(ngModel)]="exam.examCreator" placeholder="Exam Creator">
+        </p>
+        <p>
+            Exam Paper ID: <input [(ngModel)]="exam.examPaperId" placeholder="Exam Paper ID">
+        </p>
+        <p>
+            Exam Report ID: <input [(ngModel)]="exam.examReportId" placeholder="Exam Reprot ID">
+        </p>
+    </div>
+    <button (click)="goBack()">go back</button>
+
+    <button (click)="save()">save</button>
+</div>

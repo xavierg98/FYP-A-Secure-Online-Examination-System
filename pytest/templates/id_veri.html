@@ -1,0 +1,26 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+    
+                
+                <h2 class="mt-5">Student's Matriculation Card</h2>
+                <h3 style="font-family:courier;">Instructions:</h3>
+                <ol style="font-family:courier;">               
+                <li>Capture--click to capture webcam image</li>
+                <li>Please take a photo with your matriculation card clearly visible</li>
+                </ol>	
+                <img src="{{ url_for('video_feed') }}" height="80%">
+    
+                <form method="post" action="{{ url_for('taskid') }}">                   
+                    <input type="submit" value="Capture" name="click"/>
+                    
+                    </form>
+    
+                    <a href="/envi_check"><button>Proceed</button></a>	
+                
+                
+            </div>
+        </div>
+    </div>
+    </body>

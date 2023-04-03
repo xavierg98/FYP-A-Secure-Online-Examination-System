@@ -1,0 +1,94 @@
+
+
+
+<head>
+    <title>index</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  
+  <body bgcolor="#e6ffee">
+    <div class="one">
+
+      <!--Side Nav-->
+      <div class="two">
+        <h2>{{SessionUserame}}</h2>
+        <br>
+        <ul>
+          
+          <li class="active"><a routerLink="/examlist">Exams</a></li>
+          <li><a routerLink="/">Pending </a></li>
+          <li><a routerLink="/">Pending </a></li>                   
+          <li><a routerLink="/">Log out</a></li>
+        </ul>
+      </div>
+
+
+      <div class="content">
+        <div class="topbar">
+          <h2>Exams</h2>
+        </div>
+        <div class="contentbar">
+   
+         <!-- <h3>Users</h3>
+          <br>
+          <div>
+            <a routerLink="/add">
+              Add New User
+            </a>
+          </div>
+          <br>
+          <table>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+            <tr *ngFor="let user of users">
+              <td>{{user.id}}</td>
+              <td>{{user.name}}</td>
+              <td>{{user.email}}</td>
+              <td>
+                <a routerLink="/detail/{{user.id}}">Detail</a>&nbsp;
+  
+                <a routerLink="/edit/{{user.id}}">Edit</a>&nbsp;
+  
+                <button title="delete user" (click)="delete(user)">x</button>
+              </td>
+            </tr>
+          </table>
+          -->
+
+     
+
+          <section style="background-color: #eee;">
+            <div class="container py-5">
+              <div class="row" >
+                <div class="col-md-12 col-lg-4 mb-4 mb-lg-0" *ngFor="let exam of exams" style="padding-bottom: 20px;" >
+                  <div class="card">
+                    <img class="card-img-top" src="assets/examImg.PNG" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-title" style="text-align: center; font-weight: bold;">{{exam.examName}}</p>
+                      <p class="card-title">{{exam.examID}}</p>
+                      <p class="card-title">{{exam.examType}}</p>
+                      <p class="card-title">{{exam.startDate}}</p>
+                      <p class="card-title">{{exam.examStatus}}</p>
+                      <p class="card-text">Some bulk of the card's content.</p>
+                      <br>
+                      <div style="text-align: center;">
+                        <a a href="http://localhost:5000/" class="btn btn-primary" >Attend </a>
+                        </div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <!--card-->
+          
+        </div>
+  
+      </div>
+    </div>
+  </body>
+

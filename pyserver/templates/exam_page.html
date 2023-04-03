@@ -1,0 +1,134 @@
+<!doctype html>
+<title>Example</title>
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+  #main > article {
+    flex: 1;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 5vw;
+    background: #009933;
+  }
+  #main > nav {
+    order: -1;
+  }
+  header, footer {
+    background: #00b33c;
+    height: 10vh;
+    text-align: center;
+    vertical-align: text-top;
+    
+    color: #ffffff;
+    font-size: 24px;
+  }
+  header, footer, article, nav, aside {
+    padding: 1em;
+  }
+  ul {
+      text-align: center;
+      padding: 20px;
+      
+  }   
+   
+  ul a{
+      color: #ffffff;
+      display: block;
+  }
+   
+  ul a .side{
+      width: 25px;
+      align:center;
+  }
+  </style>
+<body>
+  <header>Examination</header>
+  <div id="main">
+    <article><p id="demo"></p>
+
+      <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Mar 30, 2023 22:47:00").getTime();
+      
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+      
+        // Get today's date and time
+        var now = new Date().getTime();
+          
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+          
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+          
+        // If the count down is over, write some text 
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+
+      function formValidation()
+{
+    if(document.getElementById("myFile").value==""||document.getElementById("myFile").value==null)
+    {
+        alert("No file selected");
+    return false;
+    }
+    else
+        return true;
+    }
+      </script>
+      <!/img style="float: right;" alt="" src="{{ url_for('video_feed') }}" width="200" height="200">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8  offset-lg-2">
+      
+                  
+                  <h2 class="mt-5">Test Exam</h2>
+                  <h3 style="font-family:courier;">Instructions:</h3>
+                      <ol style="font-family:courier;">               
+                      <li>Please join the video call in link below</li>
+                      <li>Please join in new tab <a href="https://louiy.daily.co/OnlineExam_session">Join</a></li>
+                      <li>Attach Handwritten solution and submit</li>                      
+                      <form action="success" onSubmit="return formValidation()">
+                          <input type="file" id="myFile" name="filename">
+                          <input type="submit">
+                        </form>
+
+                      <iframe src="{{url_for('static', filename='test.pdf')}}" width="1000px" height="1000px"></iframe> 
+                      
+                
+            </div>
+        </div>
+    </div></article>
+    <nav>
+        <ul>         
+        <a href="/">Help</a>
+        
+      </ul>
+    </nav>
+    
+  </div>
+  
+</body>

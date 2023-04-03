@@ -1,0 +1,29 @@
+
+
+
+
+
+
+
+  <div class="logincontent" align="center">
+    <div class="logintop">
+        <h1>Login</h1>
+    </div>
+  <br><br>
+    <div class="loginbottom">
+      <form action="" method="post" autocomplete="off">
+        <br>
+    <div class="msg" >{{message}}</div>
+        <br>
+        <p >User Name:</p>
+    <input type="text" name="username" placeholder="Enter Your Username" [(ngModel)]="user.name" required/>
+  <br><br>
+        <p >Password:</p>
+    <input type="password" name="password" placeholder="Enter Your Password" type="password" [(ngModel)]="user.pwd" required/>
+  <br><br><br>
+    <input type="submit" class="btn" (click)="save()" value="Login">
+      </form><br><br>
+      <p class="worddark">New to this page? <a class="worddark" href="">Register here</a></p>
+    </div>
+</div>
+

@@ -1,0 +1,92 @@
+<!doctype html>
+<title>Example</title>
+<style>
+    * {
+      box-sizing: border-box; 
+    }
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      margin: 0;
+    }
+    #main {
+      display: flex;
+      flex: 1;
+    }
+    #main > article {
+      flex: 1;
+    }
+    #main > nav, 
+    #main > aside {
+      flex: 0 0 5vw;
+      background: #009933;
+    }
+    #main > nav {
+      order: -1;
+    }
+    header, footer {
+      background: #00b33c;
+      height: 10vh;
+      text-align: center;
+      vertical-align: text-top;
+      
+      color: #ffffff;
+      font-size: 24px;
+    }
+    header, footer, article, nav, aside {
+      padding: 1em;
+    }
+    ul {
+        text-align: center;
+        padding: 20px;
+        
+    }   
+     
+    ul a{
+        color: #ffffff;
+        display: block;
+    }
+     
+    ul a .side{
+        width: 25px;
+        align:center;
+    }
+    </style>
+<body>
+  <header>Student's Photo</header>
+  <div id="main">
+    <article><div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+    
+                
+                <h2 class="mt-5">Student's Photo</h2>
+                <h3 style="font-family:courier;">Instructions:</h3>
+                <ol style="font-family:courier;">               
+                <li>Capture--click to capture webcam image</li>
+                <li>Please take a photo with your face clearly visible</li>
+                </ol>
+                <img src="{{ url_for('video_feed') }}" height="80%">
+    
+                <form method="post" action="{{ url_for('taskstu') }}">                   
+                    <input type="submit" value="Capture" name="click"/>
+                    
+                    </form>
+    
+                <a href="/id_veri"><button>Proceed</button></a>	
+                
+                
+            </div>
+        </div>
+    </div></article>
+    <nav>
+        <ul><a href="/">Camera Check</a></ul>
+        <ul><a href="/add_inst">Additional Instructions</a></ul>
+        <ul><a href="/stu_photo">Student's Photo</a></ul>
+        
+    </nav>
+    
+  </div>
+  
+</body>

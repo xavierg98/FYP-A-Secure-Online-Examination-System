@@ -1,0 +1,30 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+    
+                
+                <h2 class="mt-5">CAMERA Check</h2>
+			    <h3 style="font-family:courier;">Instructions:</h3>
+                <ol style="font-family:courier;">               
+                <li>Check if web camera is working</li>
+                </ol>
+                
+                <!video src="videoUrl" ><!/video>
+                <!video [src]="videoUrl" autoplay><!/video>
+                <img src="http://localhost:5000/video_feed" height="80%">
+                
+                   
+                <!form method="post" action="{{ urls.taskstu }}">
+                <form method="post" action="http://localhost:5000/requeststu">                   
+                    <input type="submit" value="Capture" name="click"/>
+                    
+                    </form>
+    
+                <a href="/add_inst"><button>Proceed</button></a>	
+                
+                
+            </div>
+        </div>
+    </div>
+    </body>

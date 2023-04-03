@@ -1,0 +1,26 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8  offset-lg-2">
+    
+                
+                <h2 class="mt-5">Facial Detection Check</h2>
+                <h3 style="font-family:courier;">Instructions:</h3>
+                <ol style="font-family:courier;">               
+                <li>Ensure that system displays correct name</li>               
+                </ol>	
+
+                <img src="{{ url_for('video_feedreg') }}" height="80%">
+    
+                <form method="post" action="{{ url_for('taskrec') }}">                   
+                    <input type="submit" value="Start/Stop Recording" name="rec" />
+                    
+                    </form>
+    
+                	<a href="/exam_page"><button>Proceed</button></a>
+                
+                
+            </div>
+        </div>
+    </div>
+    </body>

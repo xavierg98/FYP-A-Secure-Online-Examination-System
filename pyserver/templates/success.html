@@ -1,0 +1,84 @@
+<!doctype html>
+<title>Example</title>
+<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+  #main > article {
+    flex: 1;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 5vw;
+    background: #009933;
+  }
+  #main > nav {
+    order: -1;
+  }
+  header, footer {
+    background: #00b33c;
+    height: 10vh;
+    text-align: center;
+    vertical-align: text-top;
+    
+    color: #ffffff;
+    font-size: 24px;
+  }
+  header, footer, article, nav, aside {
+    padding: 1em;
+  }
+  ul {
+      text-align: center;
+      padding: 20px;
+      
+  }   
+   
+  ul a{
+      color: #ffffff;
+      display: block;
+  }
+   
+  ul a .side{
+      width: 25px;
+      align:center;
+  }
+  </style>
+<body>
+  <header>Examination</header>
+  <div id="main">
+    <article><p id="demo"></p>
+
+      
+      <!/img style="float: right;" alt="" src="{{ url_for('video_feed') }}" width="200" height="200">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8  offset-lg-2">
+      
+                  
+                <h2 class="mt-5">You have successfully uploaded your solutions<br>
+                Thank you!</h2>
+                      
+                
+            </div>
+        </div>
+    </div></article>
+    <nav>
+        <ul>         
+        <a href="http://localhost:4200/examlist">Home</a>
+        
+      </ul>
+    </nav>
+    
+  </div>
+  
+</body>
